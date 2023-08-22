@@ -11,14 +11,11 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_vpc" "main" {
-    cidr_block = "10.0.0.0/16"
-    instance_tenancy = "default"
-    enable_dns_support = true
-    enable_dns_hostnames = true
+resource "aws_ebs_volume" "dhanu" {
+  availability_zone = "us-east-1a"
+  size              = 40
+
   tags = {
-    Name = "dhanu01"
-    Environment = "DEV"
+    Name = "HelloWorld"
   }
-}
 }
