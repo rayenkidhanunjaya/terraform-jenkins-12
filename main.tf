@@ -8,16 +8,16 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "us-east-1"
 }
 
 resource "aws_s3_bucket" "bucket2" {
-  bucket = "my-tf-samplebucket34234"
+  bucket = "my-tf-samplebucket3423456"
   versioning {
         enabled = "true"
   }
   tags = {
-    Name        = "haribucket1234678"
+    Name        = "dhanubucket1234678"
     Environment = "Dev"
   }
 }
