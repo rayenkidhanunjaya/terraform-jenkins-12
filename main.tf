@@ -11,13 +11,14 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_s3_bucket" "bucket2" {
-  bucket = "my-tf-samplebucket3423456"
-  versioning {
-        enabled = "true"
-  }
+resource "aws_vpc" "main" {
+    cidr_block = "10.0.0.0/16"
+    instance_tenancy = "default"
+    enable_dns_support = true
+    enable_dns_hostnames = true
   tags = {
-    Name        = "dhanubucket1234678"
-    Environment = "Dev"
+    Name = "dhanu01"
+    Environment = "DEV"
   }
+}
 }
